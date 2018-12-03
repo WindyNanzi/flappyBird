@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flappy bird</title>
+	<meta name="viewport" content="width=device-width,initial-scale = 1.0 ,minimum-scale = 1.0,maximum-scale = 1.0, user-scalable = no" id = viewport">
+	<style type="text/css">
+		body{
+			margin: 0;
+			text-align: center;
+			overflow: hidden;
+		}
+		/*使得在电脑上浏览的时候画布居中显示*/
+		@media screen and (min-width: 414px){
+			canvas{
+				border: 2px solid #000;
+			}
+		}	
+	</style>
+</head>
+<body>
+	<!-- 这里采用平稳退化 -->
+	<canvas id="game">您的浏览器不支持画布！请升级浏览器！</canvas>
+	<!-- 一个完成了继承机制的JavaScript类库 -->
+	<script type="text/javascript" src="js/SimpleInheritance.js"></script>
+	<!-- 运用了Promise简单封装的Ajax -->
+	<script type="text/javascript" src="js/Ajax.js"></script>
+
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/SceneManager.js"></script>
+	<script type="text/javascript" src="js/Actor.js"></script>
+	<script type="text/javascript" src="js/Background.js"></script>
+	<script type="text/javascript" src="js/Land.js"></script>
+	<script type="text/javascript" src="js/Pipe.js"></script>
+	<script type="text/javascript" src="js/Bird.js"></script>
+	<script type="text/javascript">
+		var game = new Game("#game");
+	</script>
+</body>
+</html>
